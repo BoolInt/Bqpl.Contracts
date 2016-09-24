@@ -7,11 +7,6 @@ if "%config%" == "" (
    set config=Release
 )
 
-set version=
-if not "%PackageVersion%" == "" (
-   set version=%PackageVersion%
-)
-
 REM Restore
 call dotnet restore
 if not "%errorlevel%"=="0" goto failure
@@ -20,9 +15,13 @@ REM Build
 "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" %project%.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 if not "%errorlevel%"=="0" goto failure
 
-REM Package
-mkdir %cd%\Artifacts
-call dotnet pack %project% --configuration %config% %version% --output Artifacts
+REM Pack
+set version=
+if not "%PackageVersion%" == "" (
+   set version=-Version %PackageVersion%
+)
+mkdir Build
+call %nuget% pack "%project%\%project%.csproj" -symbols -o Build -p Configuration=%config% %version%
 if not "%errorlevel%"=="0" goto failure
 
 :success
