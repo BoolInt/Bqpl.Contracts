@@ -1,11 +1,12 @@
 ﻿{
   "frameworks": {
-    "net461": { }
+    "net461": {}
   },
   "runtimes": {
-    "win": { }
+    "win": {}
   },
   "dependencies": {
+    "Bqpl.Exceptions": "1.0.0",
     "Microsoft.CSharp": "4.0.1"
   }
 }
