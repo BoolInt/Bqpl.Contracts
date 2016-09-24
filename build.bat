@@ -20,7 +20,7 @@ REM Build
 "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" %project%.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 if not "%errorlevel%"=="0" goto failure
 
-REM Packge
+REM Package
 mkdir %cd%\Artifacts
 call dotnet pack %project% --configuration %config% %version% --output Artifacts
 if not "%errorlevel%"=="0" goto failure
