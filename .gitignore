@@ -2,3 +2,4 @@
 /Bqpl.Contracts/bin/Debug
 /Bqpl.Contracts/project.lock.json
 *.suo
+/.vs/config/applicationhost.config

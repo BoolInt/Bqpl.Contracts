@@ -10,6 +10,8 @@ if not "%PackageVersion%" == "" (
    set version=-Version %PackageVersion%
 )
 
+call %GitVersion% /updateassemblyinfo true
+
 "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" Solution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 
 mkdir Build
