@@ -1,4 +1,4 @@
-@echo Off
+@echo off
 
 set config=%1
 if "%config%" == "" (
