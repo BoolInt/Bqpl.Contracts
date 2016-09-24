@@ -7,16 +7,21 @@ if "%config%" == "" (
    set config=Release
 )
 
-set version=
-if not "%PackageVersion%" == "" (
-   set version=-Version %PackageVersion%
-)
+REM Restore
+call dotnet restore
+if not "%errorlevel%"=="0" goto failure
 
-call %GitVersion% /updateassemblyinfo true
+REM Build
+"%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" %project%.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+if not "%errorlevel%"=="0" goto failure
 
-call %NuGet% restore Bqpl.Contracts.sln -OutputDirectory %cd%\packages -NonInteractive
+REM Packge
+mkdir %cd%\Artifacts
+call dotnet pack %project% --configuration %config% %version% --output Artifacts
+if not "%errorlevel%"=="0" goto failure
 
-"%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" Bqpl.Contracts.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+:success
+exit 0
 
-mkdir Build
-call %nuget% pack "Bqpl.Contracts\Bqpl.Contracts.csproj" -symbols -o Build -p Configuration=%config% %version%
+:failure
+exit -1

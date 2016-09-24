@@ -1,9 +1,12 @@
 ﻿{
+  "name": "project.json.name",
+  "description": "project.json.description",
+
   "frameworks": {
-    "net461": {}
+    "net461": { }
   },
   "runtimes": {
-    "win": {}
+    "win": { }
   },
   "dependencies": {
     "Bqpl.Exceptions": "1.0.0",
