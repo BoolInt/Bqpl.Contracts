@@ -1,9 +1,16 @@
 ﻿{
+  "name": "Bqpl.Contracts",
+  "version": "1.0.0.0",
+  "authors": [ "bqpl" ],
+  "owners": [ "bqpl" ],
+  "projectUrl": "https://github.com/BoolInt/Bqpl.Contracts",
+  "requireLicenseAcceptance": false,
+  "summary": "summary",
   "frameworks": {
-    "net461": {}
+    "net461": { }
   },
   "runtimes": {
-    "win": {}
+    "win": { }
   },
   "dependencies": {
     "Microsoft.CSharp": "4.0.1"
