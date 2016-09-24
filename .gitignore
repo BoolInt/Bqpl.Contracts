@@ -1,3 +1,4 @@
 /Bqpl.Contracts/obj/Debug
 /Bqpl.Contracts/bin/Debug
 /Bqpl.Contracts/project.lock.json
+*.suo
