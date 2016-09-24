@@ -7,6 +7,11 @@ if "%config%" == "" (
    set config=Release
 )
 
+set version=
+if not "%PackageVersion%" == "" (
+   set version=-Version %PackageVersion%
+)
+
 REM Restore
 call dotnet restore
 if not "%errorlevel%"=="0" goto failure
