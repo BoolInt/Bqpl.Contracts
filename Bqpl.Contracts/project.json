@@ -6,6 +6,6 @@
     "win": { }
   },
   "dependencies": {
-    "Microsoft.CSharp": "4.0.1"
+    "Bqpl.Exceptions": "1.0.0"
   }
 }
