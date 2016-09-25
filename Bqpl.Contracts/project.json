@@ -1,4 +1,6 @@
 ﻿{
+  "description": "description json",
+  "authors": "authors json",
   "frameworks": {
     "net461": { }
   },
