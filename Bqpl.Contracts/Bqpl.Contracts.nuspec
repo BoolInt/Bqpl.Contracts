@@ -1,19 +1,10 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Bqpl.Contracts</id>
+    <id>$id</id>
     <version>0.0.0</version>
-    <authors>bqpl</authors>
+    <authors>nuspec-authors</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Keine Beschreibung</description>
-    <dependencies>
-      <dependency id="Bqpl.Exceptions" version="[1,1)" />
-    </dependencies>
+    <description>nuspec-description $version$</description>
   </metadata>
-  <files>
-    <file src="bin\Release\Bqpl.Contracts.dll" target="lib\net461" />
-    <file src="bin\Release\Bqpl.Contracts.pdb" target="lib\net461" />
-    <file src="bin\Release\CodeContracts\Bqpl.Contracts.Contracts.dll" target="lib\net461\CodeContracts" />
-    <file src="bin\Release\CodeContracts\Bqpl.Contracts.Contracts.pdb" target="lib\net461\CodeContracts" />
-  </files>
 </package>

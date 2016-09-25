@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Bqpl.Contracts.nuspec" />
-    <None Include="Bqpl.Contracts.symbols.nuspec" />
+    <None Include="_Bqpl.Contracts.symbols.nuspec" />
     <None Include="project.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
