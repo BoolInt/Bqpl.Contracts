@@ -1,7 +1,4 @@
 ﻿{
-  "name": "Bqpl.Contracts",
-  "description": "project.json.description",
-
   "frameworks": {
     "net461": { }
   },
@@ -9,7 +6,6 @@
     "win": { }
   },
   "dependencies": {
-    "Bqpl.Exceptions": "1.0.0",
-    "Microsoft.CSharp": "4.0.1"
+    "Bqpl.Exceptions": "1.0.0"
   }
 }
