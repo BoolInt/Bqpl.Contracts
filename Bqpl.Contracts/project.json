@@ -2,15 +2,13 @@
   "description": "description",
   "copyright": "copyright",
   "title": "title",
-  "packOptions": {
-    "summary": "summary",
-    "tags": "bqpl, contracts",
-    "releaseNotes": "releaseNotes",
-    "iconUrl": "http://www.sample.it/sample.gif",
-    "projectUrl": "https://github.com/BoolInt/Bqpl.Contracts",
-    "licenseUrl": "https://github.com/BoolInt/Bqpl.Contracts/blob/master/LICENSE",
-    "requireLicenseAcceptance": false
-  },
+  "summary": "summary",
+  "tags": "bqpl, contracts",
+  "releaseNotes": "releaseNotes",
+  "iconUrl": "http://www.sample.it/sample.gif",
+  "projectUrl": "https://github.com/BoolInt/Bqpl.Contracts",
+  "licenseUrl": "https://github.com/BoolInt/Bqpl.Contracts/blob/master/LICENSE",
+  "requireLicenseAcceptance": false,
   "frameworks": {
     "net461": { }
   },
