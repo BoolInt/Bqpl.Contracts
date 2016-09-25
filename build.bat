@@ -30,7 +30,8 @@ REM call %nuget% pack "%project%\%project%.symbols.nuspec" %version%
 REM if not "%errorlevel%"=="0" goto failure
 
 REM Pack csproj
-call %nuget% pack "%project%\%project%.csproj" %version% -Symbols
+mkdir Build
+call %nuget% pack "%project%\%project%.csproj" %version% -Symbols -o Build -p Configuration=%config%
 if not "%errorlevel%"=="0" goto failure
 
 :success
