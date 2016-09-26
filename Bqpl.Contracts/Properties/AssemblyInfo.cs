@@ -3,9 +3,9 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Bqpl.Contracts")]
-[assembly: AssemblyDescription("AssemblyDescription")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("AssemblyCompany")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Bqpl.Contracts")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]

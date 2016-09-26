@@ -24,12 +24,6 @@ set version=
 if not "%PackageVersion%" == "" (
    set version=-Version %PackageVersion%
 )
-REM call %nuget% pack "%project%\%project%.nuspec" %version%
-REM if not "%errorlevel%"=="0" goto failure
-REM call %nuget% pack "%project%\%project%.symbols.nuspec" %version%
-REM if not "%errorlevel%"=="0" goto failure
-
-REM Pack csproj
 mkdir Build
 call %nuget% pack "%project%\%project%.csproj" %version% -Symbols -o Build -p Configuration=%config%
 if not "%errorlevel%"=="0" goto failure
