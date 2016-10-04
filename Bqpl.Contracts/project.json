@@ -1,24 +1,24 @@
 ﻿{
   "description": "Code Contracts",
   "copyright": "bqpl",
-  //"title": "title",
-  //"summary": "summary",
-  "tags": [ "bqpl, contracts" ],
-  "authors": [ "bqpl" ],
-  "owners": [ "bqpl" ],
-  //"releaseNotes": "releaseNotes",
-  //"iconUrl": "http://www.sample.it/sample.gif",
+  "tags": [
+    "bqpl, contracts"
+  ],
+  "authors": [
+    "bqpl"
+  ],
+  "owners": [
+    "bqpl"
+  ],
   "projectUrl": "https://github.com/BoolInt/Bqpl.Contracts",
   "licenseUrl": "https://github.com/BoolInt/Bqpl.Contracts/blob/master/LICENSE",
   "requireLicenseAcceptance": false,
   "language": "de-DE",
   "frameworks": {
-    "net461": { }
+    "net461": {}
   },
   "runtimes": {
-    "win": { }
+    "win": {}
   },
-  "dependencies": {
-    "Bqpl.Exceptions": "1.0.0"
-  }
+  "dependencies": {}
 }
