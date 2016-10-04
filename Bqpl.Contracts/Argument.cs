@@ -1,4 +1,4 @@
-﻿using Bqpl.Exceptions;
+﻿using System;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Runtime.CompilerServices;
@@ -15,7 +15,7 @@ namespace Bqpl.Contracts
       where T : class
     {
       if (value == null)
-        throw ExceptionActivator.CreateArgumentNullException(argumentName);
+        throw new ArgumentNullException(argumentName);
       Contract.EndContractBlock();
     }
 
@@ -26,7 +26,7 @@ namespace Bqpl.Contracts
     public static void NotNullOrEmpty(string argumentName, [ValidatedNotNull]string value)
     {
       if (string.IsNullOrEmpty(value))
-        throw ExceptionActivator.CreateArgumentException(argumentName);
+        throw new ArgumentException(string.Empty, argumentName);
       Contract.EndContractBlock();
     }
   }

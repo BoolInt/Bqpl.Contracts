@@ -7,11 +7,15 @@ if "%config%" == "" (
    set config=Release
 )
 
-REM Restore
+REM Restore Packages by DotNet
 call dotnet restore
 if not "%errorlevel%"=="0" goto failure
 
-REM Build
+REM Update AssemblyInfo by GitVersion
+call %GitVersion% /updateassemblyinfo true
+if not "%errorlevel%"=="0" goto failure
+
+REM Build Solution by MSBuild
 "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" %project%.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 if not "%errorlevel%"=="0" goto failure
 
@@ -20,9 +24,8 @@ set version=
 if not "%PackageVersion%" == "" (
    set version=-Version %PackageVersion%
 )
-call %nuget% pack "%project%\%project%.nuspec" %version%
-if not "%errorlevel%"=="0" goto failure
-call %nuget% pack "%project%\%project%.symbols.nuspec" %version%
+mkdir Build
+call %nuget% pack "%project%\%project%.csproj" %version% -Symbols -o Build -p Configuration=%config%
 if not "%errorlevel%"=="0" goto failure
 
 :success

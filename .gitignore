@@ -3,3 +3,5 @@
 /Bqpl.Contracts/project.lock.json
 *.suo
 /.vs/config/applicationhost.config
+/Bqpl.Contracts/obj/Release
+/Bqpl.Contracts/bin/Release

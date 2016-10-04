@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Runtime.CompilerServices;
 
@@ -7,6 +6,7 @@ namespace Bqpl.Contracts
 {
   public static class Ensures
   {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "value")]
     [Pure]
     [ContractAbbreviator]
     [DebuggerStepThrough]
@@ -17,6 +17,7 @@ namespace Bqpl.Contracts
       Contract.Ensures(value != null);
     }
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "value")]
     [Pure]
     [ContractAbbreviator]
     [DebuggerStepThrough]
